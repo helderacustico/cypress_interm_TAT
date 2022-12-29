@@ -1,11 +1,15 @@
 describe('Lougout', () => {
     beforeEach(() => {
+
         cy.login()
         cy.visit('/')
+
     })
 
-    it('Sucessfully', () => {
+    it('Logout com sucesso', () => {
+
         cy.logout()
+        cy.url().should('be.equal', `${Cypress.config('baseUrl')}/users/sign_in`)        
         
     })
 })
