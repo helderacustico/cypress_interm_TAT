@@ -9,7 +9,8 @@ module.exports = defineConfig({
     env: {
       hideCredentials: true,
       requestMode: true,
-    }
+    },
+    experimentalRunAllSpecs: true, //executa todos os testes
   },
   fixturesFolder: false,
   video: false,
